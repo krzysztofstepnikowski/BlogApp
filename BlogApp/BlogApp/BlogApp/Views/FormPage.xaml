@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="BlogApp.Views.FormPage"
+             Title="Form">
+  
+    <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" Padding="20" Spacing="10">
+        <Entry Placeholder="Firstname" PlaceholderColor="Silver" FontSize="14" Text="{Binding Firstname}" TextColor="Black"/>
+        <Entry Placeholder="Lastname" PlaceholderColor="Silver" FontSize="14" Text="{Binding Lastname}" TextColor="Black"/>
+        <Button Text="Continue" TextColor="White" BackgroundColor="Red" FontSize="14" HorizontalOptions="FillAndExpand" 
+                Command="{Binding ContinueCommand}"/>
+    </StackLayout>
+    
+</ContentPage>

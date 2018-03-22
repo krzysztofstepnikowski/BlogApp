@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:views="clr-namespace:BlogApp.Views;assembly=BlogApp"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="BlogApp.Views.AvatarsPage"
+             Padding="20"
+             Title="Avatars">
+
+    <ListView ItemsSource="{Binding Avatars}" SeparatorVisibility="None">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Vertical" Padding="0,5">
+                    <views:InitialsView Text="{Binding Initial}" HeightRequest="35"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

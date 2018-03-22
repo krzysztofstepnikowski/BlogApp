@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="BlogApp.Views.ExpandAndCollapsePage"
+             Title="Expand and collapse">
+
+    <StackLayout Orientation="Vertical" x:Name="Collapse" Padding="20">
+        <StackLayout BackgroundColor="Orange" Margin="20" Padding="20">
+        <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding ExpandCommand}" CommandParameter="{x:Reference Collapse}"/>
+        </StackLayout.GestureRecognizers>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
